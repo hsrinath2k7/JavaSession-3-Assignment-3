@@ -1,0 +1,61 @@
+// Separate Class file with attributes and methods
+public class RandomNumber {
+	
+		double N;
+		
+		public void RandomNumberValue()
+		{
+		
+		double randomnumber = Math.random();
+		
+		if(randomnumber >= 0 && randomnumber <= N-1)
+		{
+		System.out.println("Random Number: " + randomnumber);
+		}
+		else
+		{
+			System.out.println("Random Number is not valid");
+		}
+
+	}
+}
+
+// Separate Class file with main method which creates objects with reference variables
+import java.util.Scanner;
+
+public class RandomNumberPrint {
+
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double input;
+		
+		//Getting Input number from Console
+		System.out.print("Enter a value to generate Random Number: ");
+		
+		 
+		Scanner inputNo = new Scanner(System.in);
+		
+		input = inputNo.nextDouble();
+		
+		RandomNumber rn = new RandomNumber();
+	
+		rn.N = input;
+		
+		rn.RandomNumberValue();
+		
+		
+	}
+
+}
+
+/* Output
+
+Enter a value to generate Random Number: 1
+Random Number is not valid
+
+Enter a value to generate Random Number: 10
+Random Number: 0.07063580213646292
+*/
